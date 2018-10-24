@@ -110,7 +110,7 @@ function initialize()
 	function onError(xhr) { console.log( 'An error happened' ); }
 	
 	new THREE.MTLLoader()
-		.setPath( 'models/' )
+		.setPath( 'assets/' )
 		.load( 'untitled.mtl', function ( materials ) {
 			materials.preload();
 			new THREE.OBJLoader()
