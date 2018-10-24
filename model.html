@@ -132,9 +132,8 @@ function initialize()
 			new THREE.OBJLoader()
 				.setMaterials( materials )
 				.setPath( 'models/' )
-				.load( 'untitled.obj', function ( group ) {
-					mesh0 = group.children[0];
-					mesh0.material.side = THREE.DoubleSide;
+				.load( 'untitled.obj', function ( object ) {
+					mesh0 = object;
 					mesh0.position.y = 0.25;
 					mesh0.scale.set(0.25,0.25,0.25);
 					markerRoot1.add(mesh0);
