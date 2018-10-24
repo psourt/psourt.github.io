@@ -1,1 +1,23 @@
-Hello World
+<!doctype HTML>
+<html>
+    <head>
+        <title>HBD Aneri</title>
+        <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
+        <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.0/aframe/build/aframe-ar.js"></script>
+    </head>
+
+    <body style="margin: 0px; overflow: hidden;">
+        <a-scene embedded arjs="sourceType: webcam;">
+            
+            <a-assets>
+                <a-asset-item id="feel-obj" src="https://psourt.github.io/assets/untitled.obj"></a-asset-item>
+                <a-asset-item id="feel-mtl" src="https://psourt.github.io/assets/untitled.mtl"></a-asset-item>
+            </a-assets>
+
+            <a-marker-camera present="hiro">
+                <a-obj-model src="#feel-obj" mtl="#feel-mtl" rotation="60 20 -155" scale="1 0.5 1"></a-obj-model>                
+            </a-marker-camera>
+
+        </a-scene>        
+    </body>
+</html>
